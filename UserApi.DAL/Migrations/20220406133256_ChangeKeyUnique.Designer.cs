@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UserApi.DAL;
 
@@ -10,9 +11,10 @@ using UserApi.DAL;
 namespace UserApi.DAL.Migrations
 {
     [DbContext(typeof(UserContext))]
-    partial class UserContextModelSnapshot : ModelSnapshot
+    [Migration("20220406133256_ChangeKeyUnique")]
+    partial class ChangeKeyUnique
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,10 +51,7 @@ namespace UserApi.DAL.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Name")
-                        .IsUnique();
-
-                    b.HasIndex("UserName")
+                    b.HasIndex("UserName", "Name")
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);

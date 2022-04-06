@@ -1,5 +1,9 @@
-﻿namespace UserApi.DAL
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace UserApi.DAL
 {
+    [Index(nameof(UserName), IsUnique = true)]
+    [Index(nameof(Name), IsUnique = true)]
     public class User
     {
         public int id { get; set; }
