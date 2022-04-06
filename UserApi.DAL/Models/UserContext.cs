@@ -20,6 +20,13 @@ namespace UserApi.DAL
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>(m =>
+            {
+                m.ToTable("Users");
+                m.Property(p => p.UserName).HasMaxLength(20);
+                m.Property(p => p.Password).HasMaxLength(20);
+                m.Property(p => p.Name).HasMaxLength(10);
+            });
             base.OnModelCreating(modelBuilder);
         }
     }
