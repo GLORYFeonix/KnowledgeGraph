@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Api.BLL;
 using Api.DAL;
+using Microsoft.AspNetCore.Cors;
 
-namespace UserApi.Controllers
+namespace Api.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
+    [EnableCors("Local")]
     public class UsersController : ControllerBase
     {
         private readonly IUserBll userBll;

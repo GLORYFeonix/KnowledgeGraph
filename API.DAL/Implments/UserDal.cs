@@ -12,10 +12,10 @@
             using UserContext context = new();
             return context.Users.FirstOrDefault(x => x.Name == name);
         }
-        public User GetByUserName(string username)
+        public User GetByUserName(string userName)
         {
             using UserContext context = new();
-            return context.Users.FirstOrDefault(x => x.UserName == username);
+            return context.Users.FirstOrDefault(x => x.UserName == userName);
         }
         public void Post(string userName, string password, string name)
         {
@@ -26,7 +26,7 @@
                 Password = password,
                 Name = name,
                 IsAdmin = false
-            }); ;
+            });
             context.SaveChanges();
         }
         public void Put(int id, string? userName, string? password, string? name)
@@ -35,7 +35,7 @@
             var user = context.Users.FirstOrDefault(m => m.id == id);
             user.UserName = userName ?? user.UserName;
             user.Password = password ?? user.Password;
-            user.Name = name ?? user.Name;
+            user.Name = user.Name;
             context.SaveChanges();
         }
         public void Delete(int id)

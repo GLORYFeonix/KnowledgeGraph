@@ -6,6 +6,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSingleton<IUserBll, UserBll>();
 builder.Services.AddSingleton<ILoginBll, LoginBll>();
+builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("Local",
+                policy => policy.WithOrigins("http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod());
+            // policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+
+            options.AddPolicy("AnotherPolicy",
+                policy =>
+                {
+                    policy.WithOrigins("http://www.contoso.com")
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod();
+                });
+        });
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -21,6 +35,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 
