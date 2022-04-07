@@ -12,6 +12,11 @@
             using UserContext context = new();
             return context.Users.FirstOrDefault(x => x.Name == name);
         }
+        public User GetByUserName(string username)
+        {
+            using UserContext context = new();
+            return context.Users.FirstOrDefault(x => x.UserName == username);
+        }
         public void Post(string userName, string password, string name)
         {
             using UserContext context = new();
