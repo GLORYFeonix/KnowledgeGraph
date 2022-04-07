@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UserApi.DAL\UserApi.DAL.csproj" />
+    <ProjectReference Include="..\Api.DAL\Api.DAL.csproj" />
   </ItemGroup>
 
 </Project>

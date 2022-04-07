@@ -8,14 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.3">
-      <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\UserApi.BLL\UserApi.BLL.csproj" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <ProjectReference Include="..\Api.BLL\Api.BLL.csproj" />
+    <ProjectReference Include="..\Api.DAL\Api.DAL.csproj" />
   </ItemGroup>
 
 </Project>
