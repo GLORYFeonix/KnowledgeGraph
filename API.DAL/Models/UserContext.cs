@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace UserApi.DAL
+namespace Api.DAL
 {
     public class UserContext : DbContext
     {

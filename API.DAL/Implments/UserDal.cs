@@ -1,6 +1,6 @@
-﻿namespace UserApi.DAL
+﻿namespace Api.DAL
 {
-    public class UserDal
+    public class UserDal : IUserDal
     {
         public List<User> GetAll()
         {

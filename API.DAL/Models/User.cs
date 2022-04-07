@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace UserApi.DAL
+namespace Api.DAL
 {
     [Index(nameof(UserName), IsUnique = true)]
     [Index(nameof(Name), IsUnique = true)]

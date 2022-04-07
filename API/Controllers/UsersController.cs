@@ -1,14 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using UserApi.BLL;
-using UserApi.DAL;
+using Api.BLL;
+using Api.DAL;
 
 namespace UserApi.Controllers
 {
-    /// <summary>
-    /// TODO：
-    /// 1. 修改文件夹名
-    /// 2. 创建新的LoginController
-    /// </summary>
     [Route("[controller]/[action]")]
     [ApiController]
     public class UsersController : ControllerBase

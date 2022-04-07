@@ -1,6 +1,6 @@
-﻿using UserApi.DAL;
+﻿using Api.DAL;
 
-namespace UserApi.BLL
+namespace Api.BLL
 {
     public class UserBll : IUserBll
     {

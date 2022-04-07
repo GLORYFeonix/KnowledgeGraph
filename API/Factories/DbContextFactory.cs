@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using UserApi.DAL;
+using Api.DAL;
 
 namespace UserApi.Factories
 {

@@ -1,4 +1,4 @@
-using UserApi.BLL;
+using Api.BLL;
 
 var builder = WebApplication.CreateBuilder(args);
 
