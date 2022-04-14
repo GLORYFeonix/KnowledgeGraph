@@ -9,8 +9,7 @@ builder.Services.AddSingleton<ILoginBll, LoginBll>();
 builder.Services.AddCors(options =>
         {
             options.AddPolicy("Local",
-                policy => policy.WithOrigins("http://127.0.0.1:5500").AllowAnyHeader().AllowAnyMethod());
-            // policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+            policy => policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             options.AddPolicy("AnotherPolicy",
                 policy =>
