@@ -17,6 +17,11 @@
             using UserContext context = new();
             return context.Users.FirstOrDefault(x => x.UserName == userName);
         }
+        // public User GetByUserNameAndName(string? userName, string? name)
+        // {
+        //     using UserContext context = new();
+        //     return context.Users.FirstOrDefault(x => x.UserName == userName);
+        // }
         public void Post(string userName, string password, string name)
         {
             using UserContext context = new();
@@ -38,10 +43,25 @@
             user.Name = user.Name;
             context.SaveChanges();
         }
+        public void PutByUserName(string userName, string? password, string? name)
+        {
+            using UserContext context = new();
+            var user = context.Users.FirstOrDefault(m => m.UserName == userName);
+            user.Password = password ?? user.Password;
+            user.Name = name ?? user.Name;
+            context.SaveChanges();
+        }
         public void Delete(int id)
         {
             using UserContext context = new();
             var user = context.Users.FirstOrDefault(m => m.id == id);
+            context.Users.Remove(user);
+            context.SaveChanges();
+        }
+        public void DeleteByUserName(string userName)
+        {
+            using UserContext context = new();
+            var user = context.Users.FirstOrDefault(m => m.UserName == userName);
             context.Users.Remove(user);
             context.SaveChanges();
         }

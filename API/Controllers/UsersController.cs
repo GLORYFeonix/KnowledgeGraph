@@ -28,6 +28,11 @@ namespace Api.Controllers
         {
             return userBll.GetByName(name);
         }
+        [HttpGet]
+        public List<User> GetUserByUserNameAndName(string? userName, string? name)
+        {
+            return userBll.GetByUserNameAndName(userName, name);
+        }
         [HttpPost]
         public void CreateUser(string userName, string password, string name)
         {
@@ -38,10 +43,20 @@ namespace Api.Controllers
         {
             userBll.Put(id, userName, password, name);
         }
+        [HttpPut]
+        public void UpdataUserByUserName(string userName, string? password, string? name)
+        {
+            userBll.PutByUserName(userName, password, name);
+        }
         [HttpDelete]
         public void DeleteUser(int id)
         {
             userBll.Delete(id);
+        }
+        [HttpDelete]
+        public void DeleteUserByUserName(string userName)
+        {
+            userBll.DeleteByUserName(userName);
         }
     }
 }
