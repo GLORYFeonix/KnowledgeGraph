@@ -2,13 +2,13 @@ namespace Api.DAL
 {
     public class Relationship
     {
-        // public string Name { get; set; }
         public string Source { get; set; }
+        public string Kind { get; set; }
         public string Target { get; set; }
-        public Relationship(string source, string target)
+        public Relationship(string source, string kind, string target)
         {
-            // Name = name;
             Source = source;
+            Kind = kind;
             Target = target;
         }
     }
