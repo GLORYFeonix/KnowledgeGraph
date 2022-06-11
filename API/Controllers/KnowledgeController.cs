@@ -115,11 +115,13 @@ namespace Api.Controllers
                 await session.WriteTransactionAsync(async transaction =>
                 {
                     string query = string.Format(@"match (n),(m) where n.name=$source and m.name=$target merge (n)-[r:Relationship {{name: '{0}'}}]->(m);", Type);
+                    System.Console.WriteLine(query);
                     await transaction.RunAsync(query, new { source = SourceNodeName, type = Type, target = TargetNodeName });
                 });
             }
             finally
             {
+                System.Console.WriteLine("done");
                 await session.CloseAsync();
             }
         }
@@ -145,7 +147,6 @@ namespace Api.Controllers
                 await session.WriteTransactionAsync(async transaction =>
                 {
                     string query = @"LOAD CSV WITH HEADERS FROM ""file:///single.csv"" AS row MERGE(src: Character { name: row.Source}) MERGE(tgt: Character { name: row.Target}) MERGE(src) <-[r: Relationship { name: row.Type}]->(tgt)";
-                    System.Console.WriteLine(query);
                     await transaction.RunAsync(query);
                 });
             }
