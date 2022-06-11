@@ -15,7 +15,7 @@ namespace Api.Controllers
 
         public KnowledgeController()
         {
-            driver = GraphDatabase.Driver("bolt://localhost:7687", AuthTokens.Basic("neo4j", "wasd12345652"));
+            driver = GraphDatabase.Driver("bolt://localhost:7687", AuthTokens.Basic("neo4j", "password"));
         }
 
         [HttpGet]

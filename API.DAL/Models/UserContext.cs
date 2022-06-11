@@ -16,7 +16,7 @@ namespace Api.DAL
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=localhost;database=KnowledgeGraph;uid=sa;pwd=wasd12345652");
+            optionsBuilder.UseSqlServer("server=localhost;database=KnowledgeGraph;uid=sa;pwd=password");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
