@@ -1,0 +1,57 @@
+TC21钛合金 55 nz
+表面处理技术 91 nz
+阳极化处理 5 nz
+MAO nz
+渗铬 vn
+渗碳 vn
+渗硼 vn
+喷丸处理 nz
+微动磨损 nz
+超音速火焰喷涂 nz
+损伤容限 nz
+Ti-Al-Sn-Zr-Mo-Cr-Nb-Ni-Si八元系 999 nz
+a+B两相 nz
+Ti-6-22-22S nz
+综合性能 5 n
+粘着磨损 nz
+阳极化 nz
+微弧氧化 nz
+渗Cr vn
+渗B vn
+渗C vn
+过渡层 nz
+致密层 nz
+疏松层 nz
+网篮组织 nz
+辉光等离子 nz
+沉积层 nz
+扩散层 nz
+减摩性 nz
+氧化磨损 nz
+高温氧化 nz
+氧化皮 nz
+热震 vn
+网状裂纹 nz
+龟裂纹 nz
+无氢渗碳 1 nz
+接触疲劳 1 nz
+B原子 nz
+硬质相 nz
+尺寸效应 nz
+流动应力 nz
+基体 nz
+剪切强度 nz
+晶格畸变 nz
+压应力 nz
+位错带结构网 1 nz
+变形抗力 nz
+杜东兴 nr
+XRD图谱 nz
+变形孪晶 nz
+压缩应力 nz
+激光喷丸 nz
+气动喷丸 nz
+WC10Co4Cr耐磨涂层 nz
+高低周疲劳 nz
+8元合金 nz
+纯钛 nz
